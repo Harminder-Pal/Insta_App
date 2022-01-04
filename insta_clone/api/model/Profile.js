@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const validator = require("validator");
 
 const ProfileSchema  = new mongoose.Schema({
-    _id:{
+    userId:{
         type: mongoose.Schema.Types.ObjectId
     },
     bio:{
@@ -19,7 +19,7 @@ const ProfileSchema  = new mongoose.Schema({
     },
     username:{
         type:  String,
-        required: [true, `username should be unique`],
+        required: [false, `username should be unique`],
         unique: true
     },
     email: {
